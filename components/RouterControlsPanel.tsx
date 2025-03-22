@@ -4,7 +4,11 @@ import { Button } from "@headlessui/react";
 
 import ThemeSwitch from "./ThemeSwitch";
 
-export default function RouterControlsPanel() {
+export default function RouterControlsPanel({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -16,7 +20,7 @@ export default function RouterControlsPanel() {
   };
 
   return (
-    <div className="flex w-full  h-[7%] sm:h-[5%]">
+    <header className="flex w-full  h-[7%] sm:h-[5%]">
       <Button className="mx-1 hover:text-primary-600" onClick={router.back}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -66,12 +70,12 @@ export default function RouterControlsPanel() {
         </svg>
       </Button>
       <div className="flex items-center ml-2 font-bold">
-        <span
+        <div
           className="cursor-pointer hover:text-primary-900"
           onClick={() => jump(0)}
         >
-          /Root
-        </span>
+          {children}
+        </div>
         {slug.map((item, index) => (
           <span
             className="cursor-pointer hover:text-primary-900"
@@ -84,6 +88,6 @@ export default function RouterControlsPanel() {
       </div>
 
       <ThemeSwitch />
-    </div>
+    </header>
   );
 }
