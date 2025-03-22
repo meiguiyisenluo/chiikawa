@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 网站首页 -->
   <url>
-    <loc>https://chiikawa.online</loc>
+    <loc>https://www.chiikawa.online</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://chiikawa.online/images</loc>
+    <loc>https://www.chiikawa.online/images</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chiikawa.online/images/8</loc>
+    <loc>https://www.chiikawa.online/images/8</loc>
     <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chiikawa.online/images/71</loc>
+    <loc>https://www.chiikawa.online/images/71</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chiikawa.online/images/537</loc>
+    <loc>https://www.chiikawa.online/images/537</loc>
     <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chiikawa.online/images/cus</loc>
+    <loc>https://www.chiikawa.online/images/cus</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://chiikawa.online/audios</loc>
+    <loc>https://www.chiikawa.online/audios</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://chiikawa.online/videos</loc>
+    <loc>https://www.chiikawa.online/videos</loc>
     <lastmod>2025-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
