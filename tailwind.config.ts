@@ -1,3 +1,4 @@
+// @ts-check
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,6 +10,21 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "roboto",
+          "oxygen",
+          "ubuntu",
+          "cantarell",
+          "Fira Sans",
+          "Droid Sans",
+          "Helvetica Neue",
+          "sans-serif",
+        ],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -15,43 +15,44 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
     <main className="w-full h-[93%] sm:h-[95%] flex flex-wrap content-start justify-start overflow-y-auto overflow-x-hidden p-4 outline-none">
       {fileList.map((file: { type: string; name: string }) => (
         <div
-          className="overflow-hidden rounded-md cursor-pointer"
+          className="overflow-hidden rounded-md cursor-pointer w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/7 2xl:w-1/8"
           key={file.name}
         >
           <FileHandler file={file} url={url}>
             <div className="w-full h-full flex items-center justify-center">
-              <div className="p-2">
-                {(file.type === "directory" && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="relative w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
-                    />
-                  </svg>
-                )) ||
-                  ((file.name.endsWith(".jpg") ||
-                    file.name.endsWith(".jpeg") ||
-                    file.name.endsWith(".png") ||
-                    file.name.endsWith(".gif") ||
-                    file.name.endsWith(".webp")) && (
-                    <div className="relative w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]">
+              <div className="p-2 w-full h-full">
+                {
+                  (file.type === "directory" && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-full h-auto"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                      />
+                    </svg>
+                  )) ||
+                    ((file.name.endsWith(".jpg") ||
+                      file.name.endsWith(".jpeg") ||
+                      file.name.endsWith(".png") ||
+                      file.name.endsWith(".gif") ||
+                      file.name.endsWith(".webp")) && (
                       <Image
                         src={url + slug.join("/") + "/" + file.name}
                         alt={file.name}
-                        fill={true}
-                        className="rounded-md object-contain"
+                        layout="responsive" // 宽度始终自适应父容器
+                        width={100}
+                        height={0}
+                        className="rounded-md"
                         placeholder="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM8ceKaMgAHUQKLM6CQWwAAAABJRU5ErkJggg=="
                       />
-                    </div>
-                  )) 
+                    ))
                   // ||
                   // (file.type === "file" && (
                   //   <svg
@@ -60,7 +61,7 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
                   //     viewBox="0 0 24 24"
                   //     strokeWidth={1.5}
                   //     stroke="currentColor"
-                  //     className="relative w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]"
+                  //     className="w-full h-auto"
                   //   >
                   //     <path
                   //       strokeLinecap="round"
@@ -69,8 +70,8 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
                   //     />
                   //   </svg>
                   // ))
-                  }
-                <p className="text-center">
+                }
+                <p className={`text-center`}>
                   {file.type === "directory" ? file.name : ""}
                 </p>
               </div>

@@ -2,7 +2,11 @@
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@headlessui/react";
 
+import MobileNav from "@/components/MobileNav";
+import headerNavLinks from "@/data/headerNavLinks";
+
 import ThemeSwitch from "./ThemeSwitch";
+import Link from "next/link";
 
 export default function RouterControlsPanel({
   children,
@@ -87,7 +91,20 @@ export default function RouterControlsPanel({
         ))}
       </div>
 
+      <div className={`ml-auto mr-5 flex items-center text-sm`}>
+        {headerNavLinks.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="hidden sm:block m-2 font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
+
       <ThemeSwitch />
+      <MobileNav />
     </header>
   );
 }
