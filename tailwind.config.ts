@@ -6,12 +6,31 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s ease-out forwards", // 淡入动画
+        "fade-out": "fadeOut 0.5s ease-out forwards", // 淡出动画
+        "scale-in": "scaleIn 0.5s ease-out forwards", // 缩放动画
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+        scaleIn: {
+          "0%": { transform: "scale(0.9)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
       },
     },
   },

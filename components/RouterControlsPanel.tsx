@@ -20,7 +20,7 @@ export default function RouterControlsPanel({
   };
 
   return (
-    <header className="flex w-full  h-[7%] sm:h-[5%]">
+    <header className="flex w-full  h-[7%] sm:h-[5%] px-4">
       <Button className="mx-1 hover:text-primary-600" onClick={router.back}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

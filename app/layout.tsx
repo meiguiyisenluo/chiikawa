@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -101,27 +102,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CreativeWork",
-            name: "Chiikawa 表情包合集",
-            description: siteMetadata.description,
-            creator: {
-              "@type": "Person",
-              name: "Yisen L",
-            },
-            url: siteMetadata.siteUrl,
-            thumbnailUrl: siteMetadata.socialBanner,
-            image: [siteMetadata.socialBanner],
-            datePublished: "2025-03-22",
-            keywords: siteMetadata.keywords.join(", "),
-          })}
-        </script>
-      </Head>
+      <GoogleAnalytics gaId="G-62682KVZ4V" />
+      <Script id="jsonld" async type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Chiikawa 表情包合集",
+          description: siteMetadata.description,
+          creator: {
+            "@type": "Person",
+            name: "Yisen L",
+          },
+          url: siteMetadata.siteUrl,
+          thumbnailUrl: siteMetadata.socialBanner,
+          image: [siteMetadata.socialBanner],
+          datePublished: "2025-03-22",
+          keywords: siteMetadata.keywords.join(", "),
+        })}
+      </Script>
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} select-none antialiased w-[100vw] h-[100vh] bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} select-none antialiased w-[100vw] h-[100vh] overflow-hidden bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
       >
         <ThemeProviders>
           <RouterControlsPanel>
