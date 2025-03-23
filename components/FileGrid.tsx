@@ -3,7 +3,7 @@ import Image from "next/image";
 import FileHandler from "@/components/FileHandler";
 
 const server = "https://luoyisen.com/shareserver/";
-const endpoint = "chiikawa/";
+const endpoint = "chiikawa/images/";
 const url = server + endpoint;
 
 export default async function FileGrid({ slug = [] }: { slug?: string[] }) {

@@ -1,7 +1,16 @@
+import Image from "next/image";
 export default function Loading() {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-white"></div>
+      <div className="relative w-[100px] h-[73px] sm:w-[150px] sm:h-[110px]">
+        <Image
+          alt="loading.gif"
+          src="/static/images/loading.gif"
+          fill={true}
+          className="object-contain"
+          priority={true}
+        />
+      </div>
     </div>
   );
 }
