@@ -24,7 +24,7 @@ export default function RouterControlsPanel({
   };
 
   return (
-    <header className="flex w-full h-[7%] sm:h-[10%] px-4">
+    <header className="flex w-full h-[7%] sm:h-[8%] px-4 sticky top-0 bg-inherit shadow-md">
       <Button className="mx-1 hover:text-primary-600" onClick={router.back}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

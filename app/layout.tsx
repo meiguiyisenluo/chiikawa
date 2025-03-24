@@ -9,7 +9,6 @@ import { ThemeProviders } from "./theme-providers";
 
 import { siteMetadata } from "@/data/siteMetadata";
 
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
@@ -112,13 +111,13 @@ export default function RootLayout({
       </Script>
 
       <body
-        className={`font-sans antialiased w-[100vw] h-[100vh] overflow-hidden bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
+        className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
       >
         <ThemeProviders>
           <RouterControlsPanel>
             <h1>/Chiikawa</h1>
           </RouterControlsPanel>
-          {children}
+          <main>{children}</main>
         </ThemeProviders>
       </body>
     </html>

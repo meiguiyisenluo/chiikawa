@@ -12,7 +12,7 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
   }).then((res) => res.json());
 
   return (
-    <main className="w-full h-[93%] sm:h-[90%] flex flex-wrap content-start justify-start overflow-y-auto overflow-x-hidden p-4 lg:p-8 outline-none">
+    <div className="w-full h-[93%] sm:h-[92%] flex flex-wrap content-start justify-start p-4 lg:p-8 outline-none">
       {fileList.map((file: { type: string; name: string }) => (
         <div
           className="overflow-hidden rounded-md cursor-pointer w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/7 2xl:w-1/8"
@@ -79,6 +79,6 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
           </FileHandler>
         </div>
       ))}
-    </main>
+    </div>
   );
 }
