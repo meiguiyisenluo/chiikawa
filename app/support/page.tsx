@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Support() {
   return (
@@ -71,7 +72,11 @@ export default function Support() {
         <li>
           <p className="font-bold">2. GitHub 点个 Star</p>
           <p className="indent-[2em]">
-            访问网站的源码页面，给我点个小星星 🌟！
+            访问网站的{" "}
+            <Link href={"https://github.com/meiguiyisenluo/chiikawa"}>
+              源码页面
+            </Link>
+            ，给我点个小星星 🌟！
             这对我未来找工作非常有帮助，也让我更有动力继续完善。
           </p>
           <br />
@@ -101,22 +106,21 @@ export default function Support() {
               />
             </div>
           </p>
-
-
-          <br />
-          <br />
-          <hr />
-          <br />
-          <br />
-
-          <p className="font-bold">感谢你的支持！</p>
-          <br />
-          <p className="indent-[2em]">
-            因为有你们的陪伴，这个网站才更有意义！
-            希望你们用得开心，也期待和你们一起创造更有爱的 Chiikawa 社区！
-          </p>
         </li>
       </ul>
+
+      <br />
+      <br />
+      <hr />
+      <br />
+      <br />
+
+      <p className="font-bold">感谢你的支持！</p>
+      <br />
+      <p className="indent-[2em]">
+        因为有你们的陪伴，这个网站才更有意义！
+        希望你们用得开心，也期待和你们一起创造更有爱的 Chiikawa 社区！
+      </p>
     </div>
   );
 }

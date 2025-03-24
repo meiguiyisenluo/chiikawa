@@ -4,6 +4,10 @@ const headerNavLinks: Array<{ name: string; href: string }> = [
     href: "/",
   },
   {
+    name: "使用方式",
+    href: "/usetype",
+  },
+  {
     name: "支持",
     href: "/support",
   },
