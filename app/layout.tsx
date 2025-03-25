@@ -3,7 +3,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-import RouterControlsPanel from "@/components/RouterControlsPanel";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import { ThemeProviders } from "./theme-providers";
 
@@ -114,10 +115,11 @@ export default function RootLayout({
         className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
       >
         <ThemeProviders>
-          <RouterControlsPanel>
+          <Header>
             <h1>/Chiikawa</h1>
-          </RouterControlsPanel>
+          </Header>
           <main>{children}</main>
+          <Footer></Footer>
         </ThemeProviders>
       </body>
     </html>

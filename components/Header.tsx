@@ -8,7 +8,7 @@ import headerNavLinks from "@/data/headerNavLinks";
 import ThemeSwitch from "./ThemeSwitch";
 import Link from "next/link";
 
-export default function RouterControlsPanel({
+export default function Header({
   children,
 }: {
   children: React.ReactNode;
