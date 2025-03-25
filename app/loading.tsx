@@ -5,10 +5,11 @@ export default function Loading() {
       <Image
         alt="loading.gif"
         src="/static/images/loading.gif"
-        width={100}
-        height={100}
+        width={0}
+        height={0}
         className="w-[100px] sm:w-[150px] h-auto object-contain"
         priority={true}
+        loading="eager"
       />
     </div>
   );

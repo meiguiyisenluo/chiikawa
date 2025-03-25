@@ -9,7 +9,9 @@ const url = server + endpoint;
 export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
   const fileList = await fetch(url + slug.join("/"), {
     cache: "no-cache",
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .catch(() => []);
 
   return (
     <div className="w-full h-[93%] sm:h-[92%] flex flex-wrap content-start justify-start p-4 lg:p-8 outline-none">
@@ -32,25 +34,27 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
                       className="w-full h-auto"
                     >
                       <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
                       />
                     </svg>
-                    )) ||
+                  )) ||
                     ((file.name.endsWith(".jpg") ||
                       file.name.endsWith(".jpeg") ||
                       file.name.endsWith(".png") ||
                       file.name.endsWith(".gif") ||
                       file.name.endsWith(".webp")) && (
                       <Image
-                      src={url + slug.join("/") + "/" + file.name}
-                      alt={file.name}
-                      width={100}
-                      height={100}
-                      className="rounded-md w-full h-auto object-contain"
-                      placeholder="blur"
-                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM8ceKaMgAHUQKLM6CQWwAAAABJRU5ErkJggg=="
+                        src={url + slug.join("/") + "/" + file.name}
+                        alt={file.name}
+                        width={100}
+                        height={100}
+                        className="rounded-md w-full h-auto object-contain"
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM8ceKaMgAHUQKLM6CQWwAAAABJRU5ErkJggg=="
+                        unoptimized
+                        loading="lazy" // 保持懒加载
                       />
                     ))
                   // ||

@@ -90,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <GoogleAnalytics gaId="G-62682KVZ4V" />
       <Script id="jsonld" async type="application/ld+json">
         {JSON.stringify({
