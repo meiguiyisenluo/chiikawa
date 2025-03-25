@@ -1,37 +1,45 @@
 <rss version="2.0">
   <channel>
     <title>Chiikawa 表情包</title>
-    <link>https://chiikawa.com</link>
+    <link>https://chiikawa.online</link>
     <description>最新的 Chiikawa 表情包更新</description>
     <lastBuildDate>Sat, 22 Mar 2025 20:00:00 +0000</lastBuildDate>
 
     <item>
-      <title>Chiikawa 新增小八表情包</title>
-      <link>https://chiikawa.com/images/8</link>
+      <title>Chiikawa 新增表情包</title>
+      <link>https://chiikawa.online/images</link>
       <description>新增超可爱的 Chiikawa 开心表情，快来下载！</description>
       <pubDate>Sat, 22 Mar 2025 20:00:00 +0000</pubDate>
-      <guid>https://chiikawa.com/images/8</guid>
+      <guid>https://chiikawa.online/images/8</guid>
+    </item>
+
+    <item>
+      <title>Chiikawa 新增小八表情包</title>
+      <link>https://chiikawa.online/images/8</link>
+      <description>新增超可爱的 Chiikawa 开心表情，快来下载！</description>
+      <pubDate>Sat, 22 Mar 2025 20:00:00 +0000</pubDate>
+      <guid>https://chiikawa.online/images/8</guid>
     </item>
     <item>
       <title>Chiikawa 新增吉伊表情包</title>
-      <link>https://chiikawa.com/images/71</link>
+      <link>https://chiikawa.online/images/71</link>
       <description>新增超可爱的 Chiikawa 开心表情，快来下载！</description>
       <pubDate>Sat, 22 Mar 2025 20:00:00 +0000</pubDate>
-      <guid>https://chiikawa.com/images/71</guid>
+      <guid>https://chiikawa.online/images/71</guid>
     </item>
     <item>
       <title>Chiikawa 新增乌萨奇表情包</title>
-      <link>https://chiikawa.com/images/537</link>
+      <link>https://chiikawa.online/images/537</link>
       <description>新增超可爱的 Chiikawa 开心表情，快来下载！</description>
       <pubDate>Sat, 22 Mar 2025 20:00:00 +0000</pubDate>
-      <guid>https://chiikawa.com/images/537</guid>
+      <guid>https://chiikawa.online/images/537</guid>
     </item>
     <item>
       <title>Chiikawa 新增Chiikawa表情包</title>
-      <link>https://chiikawa.com/images/cus</link>
+      <link>https://chiikawa.online/images/cus</link>
       <description>新增超可爱的 Chiikawa 开心表情，快来下载！</description>
       <pubDate>Sat, 22 Mar 2025 20:00:00 +0000</pubDate>
-      <guid>https://chiikawa.com/images/cus</guid>
+      <guid>https://chiikawa.online/images/cus</guid>
     </item>
   </channel>
 </rss>

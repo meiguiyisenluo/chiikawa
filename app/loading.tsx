@@ -10,6 +10,7 @@ export default function Loading() {
         className="w-[100px] sm:w-[150px] h-auto object-contain"
         priority={true}
         loading="eager"
+        unoptimized
       />
     </div>
   );
