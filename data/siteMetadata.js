@@ -1,5 +1,5 @@
 export const siteMetadata = {
-  title: "最全吉伊卡哇chiikawa动态表情包大合集！再也不缺小八表情啦！！！",
+  title: "Chiikawa 分享站",
   description: "最全吉伊卡哇chiikawa动态表情包大合集！再也不缺小八表情啦！！！",
   keywords: [
     "chiikawa",

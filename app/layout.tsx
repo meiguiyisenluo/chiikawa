@@ -115,9 +115,7 @@ export default function RootLayout({
         className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
       >
         <ThemeProviders>
-          <Header>
-            <h1>/Chiikawa</h1>
-          </Header>
+          <Header></Header>
           <main>{children}</main>
           <Footer></Footer>
         </ThemeProviders>
