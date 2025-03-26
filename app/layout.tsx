@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Head from "next/head";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -84,6 +85,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [siteMetadata.socialBanner],
   },
+
+  other: {
+    name: siteMetadata.title,
+    description: siteMetadata.description,
+    image: siteMetadata.socialBanner,
+  },
 };
 
 export default function RootLayout({
@@ -111,6 +118,15 @@ export default function RootLayout({
           keywords: siteMetadata.keywords.join(", "),
         })}
       </Script>
+      <Head>
+        <meta itemProp="name" content={siteMetadata.title} />
+        <meta itemProp="image" content={siteMetadata.socialBanner} />
+        <meta
+          name="description"
+          itemProp="description"
+          content={siteMetadata.description}
+        />
+      </Head>
 
       <body
         className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}

@@ -25,9 +25,8 @@ export const siteMetadata = {
     "吉伊表情包",
     "小八表情包",
     "电子布洛芬",
+    "罗亦森",
   ],
   siteUrl: "https://chiikawa.online",
-  socialBanner: `${
-    process.env.BASE_PATH || ""
-  }/static/images/socialBanner.png`,
+  socialBanner: `${process.env.BASE_PATH || ""}/static/images/socialBanner.png`,
 };
