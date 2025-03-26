@@ -5,7 +5,7 @@ export default function Footer() {
         © 2025 Chiikawa 表情包站. 保留所有权利.
       </p>
       <p className="text-sm text-gray-600 dark:text-white">
-        免责声明：所有素材来源于网络，如有侵权，请联系我们处理。
+        免责声明：所有素材来源于网络，如有侵权，请联系我们删除处理。
       </p>
       <p className="text-sm text-gray-600 dark:text-white">
         联系方式：

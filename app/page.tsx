@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <div className="py-4 bg-gray-100">
+      <div className="py-4 bg-gray-100 dark:bg-transparent">
         <div className="flex justify-around w-full max-w-7xl p-4 lg:p-8 mx-auto ">
           {[
             {
@@ -25,6 +25,7 @@ export default function Page() {
                 width={300}
                 height={300}
                 priority={true}
+                className="border-2 border-yellow-200 dark:border-blue-500"
               />
               <p className="font-bold text-center mt-2">{item.alt}</p>
             </Link>

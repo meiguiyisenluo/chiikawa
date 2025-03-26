@@ -24,6 +24,7 @@ export const siteMetadata = {
     "乌萨奇表情包",
     "吉伊表情包",
     "小八表情包",
+    "电子布洛芬",
   ],
   siteUrl: "https://chiikawa.online",
   socialBanner: `https://luoyisen.com/shareserver/chiikawa/images/cus/04.png`,

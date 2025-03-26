@@ -1,15 +1,22 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  Transition,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 import { Fragment, useState, useEffect, useRef } from "react";
-import Link from "next/link";
 
 import headerNavLinks from "@/data/headerNavLinks";
+import Link from "next/link";
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false);
@@ -32,7 +39,7 @@ const MobileNav = () => {
   });
 
   return (
-    <>
+    <nav className="h-6">
       <button
         aria-label="Toggle Menu"
         onClick={onToggleNav}
@@ -81,16 +88,48 @@ const MobileNav = () => {
                 ref={navRef}
                 className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left"
               >
-                {headerNavLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="mb-4 py-2 pr-4 text-2xl  tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
-                    onClick={onToggleNav}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {headerNavLinks.map((item) => {
+                  if ("href" in item) {
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="mb-4 py-2 pr-4 text-2xl  tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                        onClick={onToggleNav}
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  }
+
+                  if ("children" in item) {
+                    return (
+                      <Disclosure key={item.name} defaultOpen={false}>
+                        <DisclosureButton className="mb-4 py-2  group flex w-full items-center justify-between">
+                          <span className="text-2xl text-gray-900 group-data-[hover]::text-primary-500 dark:text-gray-100 dark:group-data-[hover]::text-primary-400">
+                            {item.name}
+                          </span>
+                          <ChevronDownIcon className="mr-8 size-8 fill-black/60 dark:fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180 transition-transform" />
+                        </DisclosureButton>
+                        <DisclosurePanel
+                          transition
+                          className="origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0"
+                        >
+                          {item.children.map((item) => (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              className="block ml-2 py-1 pr-4 text-xl tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                              onClick={onToggleNav}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </DisclosurePanel>
+                      </Disclosure>
+                    );
+                  }
+                })}
               </nav>
 
               <button
@@ -114,7 +153,7 @@ const MobileNav = () => {
           </Transition.Child>
         </Dialog>
       </Transition>
-    </>
+    </nav>
   );
 };
 
