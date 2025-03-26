@@ -10,7 +10,6 @@ export async function generateMetadata(props: {
   else if (slug[0] === "537") res = "乌萨奇";
   return {
     title: res,
-    description: res,
   };
 }
 

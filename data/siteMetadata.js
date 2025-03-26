@@ -27,5 +27,7 @@ export const siteMetadata = {
     "电子布洛芬",
   ],
   siteUrl: "https://chiikawa.online",
-  socialBanner: `https://luoyisen.com/shareserver/chiikawa/images/cus/04.png`,
+  socialBanner: `${
+    process.env.BASE_PATH || ""
+  }/static/images/cus/socialBanner.png`,
 };
