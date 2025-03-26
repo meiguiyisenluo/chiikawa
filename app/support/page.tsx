@@ -73,7 +73,7 @@ export default function Support() {
           <p className="font-bold">2. GitHub 点个 Star</p>
           <p className="indent-[2em]">
             访问网站的{" "}
-            <Link href={"https://github.com/meiguiyisenluo/chiikawa"}>
+            <Link href={"https://github.com/meiguiyisenluo/chiikawa"} target="_blank" className="text-blue-500">
               源码页面
             </Link>
             ，给我点个小星星 🌟！

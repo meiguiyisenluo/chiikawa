@@ -33,6 +33,23 @@ const headerNavLinks: Array<HrefNavItem | ChildrenNavItem> = [
     ],
   },
   {
+    name: "角色介绍",
+    children: [
+      {
+        name: "ちいかわ 吉伊 chiikawa",
+        href: "/character/71",
+      },
+      {
+        name: "ハチワレ 小八 hachiware",
+        href: "/character/8",
+      },
+      {
+        name: "うさぎ 乌萨奇 usagi",
+        href: "/character/537",
+      },
+    ],
+  },
+  {
     name: "更多",
     children: [
       {

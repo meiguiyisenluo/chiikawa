@@ -33,7 +33,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="py-4">
+      <div className="py-4 bg-gray-100 dark:bg-transparent">
         <div className="w-full max-w-7xl p-4 lg:p-8 mx-auto flex justify-between">
           {[
             {
@@ -65,6 +65,25 @@ export default function Page() {
           ))}
         </div>
       </div>
+
+      
+      {Array.from({ length: 18 }, (v, k) => {
+        k += 1;
+        const l = k < 10 ? "0" + k : k;
+        const src = `${process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/poster/${l}.jpg`;
+        return (
+          <Link href="/images" key={l}>
+            <Image
+              alt={src}
+              src={src}
+              width={1200}
+              height={500}
+              priority={k < 5}
+              className="w-full h-auto object-contain"
+            />
+          </Link>
+        );
+      })}
     </>
   );
 }

@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import { ThemeProviders } from "./theme-providers";
 
@@ -118,6 +119,7 @@ export default function RootLayout({
           <Header></Header>
           <main>{children}</main>
           <Footer></Footer>
+          <ScrollToTop />
         </ThemeProviders>
       </body>
     </html>

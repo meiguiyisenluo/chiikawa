@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  CloseButton,
+} from "@headlessui/react";
 
 import MobileNav from "@/components/MobileNav";
 import headerNavLinks from "@/data/headerNavLinks";
@@ -54,7 +59,8 @@ export default function Header() {
                   >
                     <div className="p-3">
                       {item.children?.map((item) => (
-                        <Link
+                        <CloseButton
+                          as={Link}
                           key={item.name}
                           className="block rounded-lg py-2 px-3 transition hover:bg-black/50"
                           href={item.href}
@@ -62,7 +68,7 @@ export default function Header() {
                           <p className="font-semibold text-white">
                             {item.name}
                           </p>
-                        </Link>
+                        </CloseButton>
                       ))}
                     </div>
                   </PopoverPanel>
