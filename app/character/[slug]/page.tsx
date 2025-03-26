@@ -5,7 +5,7 @@ import { roleList, Character } from "./data";
 
 const CharacterCard = ({ character }: { character: Character }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden p-4 sm:p-8 max-w-4xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center bg-white dark:bg-transparent shadow-lg rounded-lg overflow-hidden p-4 sm:p-8 max-w-4xl mx-auto">
       {/* 头像 */}
       <div className="flex-shrink-0 mb-4 md:mb-0">
         <Image
@@ -17,10 +17,8 @@ const CharacterCard = ({ character }: { character: Character }) => {
         />
       </div>
       {/* 人物信息 */}
-      <div className="flex flex-col md:text-left md:ml-6">
-        <h2 className="text-center text-2xl font-bold text-gray-800">
-          {character.name}
-        </h2>
+      <div className="flex flex-col md:text-left md:ml-6 text-gray-800 dark:text-white/50">
+        <h2 className="text-center text-2xl font-bold">{character.name}</h2>
         <br />
         <p>
           <span className="font-bold">生日：</span>
@@ -40,12 +38,12 @@ const CharacterCard = ({ character }: { character: Character }) => {
 
         {character.descriptions.map((desc, idx) => (
           <div key={idx}>
-            <p className="mt-2 text-gray-600 indent-[2em] text-left">{desc}</p>
+            <p className="mt-2 indent-[2em]">{desc}</p>
             <br />
           </div>
         ))}
 
-        <Link className="flex font-bold text-blue-500" href={character.link}>
+        <Link className="flex font-bold text-blue-500 dark:text-red-500" href={character.link}>
           <span className="mr-1">想要 {character.name} 的表情包</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
