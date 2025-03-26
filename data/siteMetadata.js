@@ -29,5 +29,5 @@ export const siteMetadata = {
   siteUrl: "https://chiikawa.online",
   socialBanner: `${
     process.env.BASE_PATH || ""
-  }/static/images/cus/socialBanner.png`,
+  }/static/images/socialBanner.png`,
 };
