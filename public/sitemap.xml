@@ -3,39 +3,73 @@
   <!-- 网站首页 -->
   <url>
     <loc>https://www.chiikawa.online</loc>
-    <lastmod>2025-03-22</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.chiikawa.online/images</loc>
-    <lastmod>2025-03-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.chiikawa.online/images/8</loc>
-    <lastmod>2025-03-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.chiikawa.online/images/71</loc>
-    <lastmod>2025-03-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.chiikawa.online/images/537</loc>
-    <lastmod>2025-03-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.chiikawa.online/images/cus</loc>
-    <lastmod>2025-03-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://www.chiikawa.online/character/8</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chiikawa.online/character/71</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.chiikawa.online/character/537</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.chiikawa.online/support</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.chiikawa.online/usetype</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
