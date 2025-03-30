@@ -54,11 +54,11 @@ const headerNavLinks: Array<HrefNavItem | ChildrenNavItem> = [
     children: [
       {
         name: "使用方式",
-        href: "/usetype",
+        href: "/more/usetype",
       },
       {
         name: "支持",
-        href: "/support",
+        href: "/more/support",
       },
     ],
   },
