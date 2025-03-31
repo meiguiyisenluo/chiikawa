@@ -13,13 +13,17 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ dir: string }> }
 ) {
-  const { dir } = await params;
-  const prefix = dir ? `${dir}/` : "";
+  const { dir = [] } = await params;
+  console.log("params", {
+    Bucket: "chiikawa",
+    Prefix: `${(dir as Array<string>).join("/")}/`,
+    Delimiter: "/", // 用伪目录分隔符
+  });
   return NextResponse.json(
     await s3
       .listObjects({
         Bucket: "chiikawa",
-        Prefix: `images/${prefix}`,
+        Prefix: `${(dir as Array<string>).join("/")}/`,
         Delimiter: "/", // 用伪目录分隔符
       })
       .promise()

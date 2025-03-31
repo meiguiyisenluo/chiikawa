@@ -5,7 +5,7 @@ const url = process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL;
 
 export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
   const fileList = await fetch(
-    `${process.env.BASE_URL}/api/cloudflare-r2/${slug.join("/")}`,
+    `${process.env.BASE_URL}/api/cloudflare-r2/images/${slug.join("/")}`,
     {
       cache: "no-cache",
     }
