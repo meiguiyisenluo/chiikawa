@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
+import FramerMotionProgress from "@/components/FramerMotionProgress";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -136,6 +137,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer></Footer>
           <ScrollToTop />
+          <FramerMotionProgress></FramerMotionProgress>
         </ThemeProviders>
       </body>
     </html>

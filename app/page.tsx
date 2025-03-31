@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import FramerMotionDiv from "@/components/FramerMotionDiv";
+
 export default function Page() {
   return (
     <>
@@ -19,15 +21,22 @@ export default function Page() {
             },
           ].map((item) => (
             <Link href={item.href} key={item.src}>
-              <Image
-                alt={item.alt}
-                src={item.src}
-                width={300}
-                height={300}
-                priority={true}
-                className="border-2 border-yellow-200 dark:border-blue-500"
-              />
-              <p className="font-bold text-center mt-2">{item.alt}</p>
+              <FramerMotionDiv
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Image
+                  alt={item.alt}
+                  src={item.src}
+                  width={300}
+                  height={300}
+                  priority={true}
+                  className="border-2 border-yellow-200 dark:border-blue-500"
+                />
+                <p className="font-bold text-center mt-2">{item.alt}</p>
+              </FramerMotionDiv>
             </Link>
           ))}
         </div>
@@ -53,34 +62,46 @@ export default function Page() {
             },
           ].map((item) => (
             <Link href={item.href} key={item.src}>
-              <Image
-                alt={item.alt}
-                src={item.src}
-                width={300}
-                height={300}
-                priority={true}
-              />
-              <p className="font-bold text-center mt-2">{item.alt}</p>
+              <FramerMotionDiv
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Image
+                  alt={item.alt}
+                  src={item.src}
+                  width={300}
+                  height={300}
+                  priority={true}
+                />
+                <p className="font-bold text-center mt-2">{item.alt}</p>
+              </FramerMotionDiv>
             </Link>
           ))}
         </div>
       </div>
 
-      
       {Array.from({ length: 18 }, (v, k) => {
         k += 1;
         const l = k < 10 ? "0" + k : k;
         const src = `${process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/poster/${l}.jpg`;
         return (
           <Link href="/images" key={l}>
-            <Image
-              alt={src}
-              src={src}
-              width={1200}
-              height={500}
-              priority={k < 5}
-              className="w-full h-auto object-contain"
-            />
+            <FramerMotionDiv
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                alt={src}
+                src={src}
+                width={1200}
+                height={500}
+                priority={k < 5}
+                className="w-full h-auto object-contain"
+              />
+            </FramerMotionDiv>
           </Link>
         );
       })}

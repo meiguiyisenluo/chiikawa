@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import FramerMotionDiv from "@/components/FramerMotionDiv";
+
 const url = process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL;
 
 export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
@@ -23,7 +25,13 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
           >
             <Link href={url + "/" + file.Key} target="_blank">
               <div className="w-full h-full flex items-center justify-center">
-                <div className="p-2 w-full h-full">
+                <FramerMotionDiv
+                  className="p-2 w-full h-full"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Image
                     src={url + "/" + file.Key}
                     alt={file.Key}
@@ -35,10 +43,7 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
                     unoptimized
                     loading="lazy" // 保持懒加载
                   />
-                  <p className={`text-center`}>
-                    {file.type === "directory" ? file.Key : ""}
-                  </p>
-                </div>
+                </FramerMotionDiv>
               </div>
             </Link>
           </div>
