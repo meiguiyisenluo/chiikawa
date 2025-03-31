@@ -5,9 +5,9 @@ import { roleList, Character } from "./data";
 
 const CharacterCard = ({ character }: { character: Character }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white dark:bg-transparent shadow-lg rounded-lg overflow-hidden p-4 sm:p-8 max-w-4xl mx-auto">
+    <div className="flex flex-col md:flex-row my-4 items-center bg-white dark:bg-transparent shadow-lg rounded-lg overflow-hidden p-4 sm:p-8 max-w-4xl mx-auto">
       {/* 头像 */}
-      <div className="flex-shrink-0 mb-4 md:mb-0">
+      <div className="flex-shrink-0 mb-4 md:mb-0 self-center md:self-start">
         <Image
           src={character.image}
           alt={character.name}
@@ -43,7 +43,10 @@ const CharacterCard = ({ character }: { character: Character }) => {
           </div>
         ))}
 
-        <Link className="flex font-bold text-blue-500 dark:text-red-500" href={character.link}>
+        <Link
+          className="flex font-bold text-blue-500 dark:text-red-500"
+          href={character.link}
+        >
           <span className="mr-1">想要 {character.name} 的表情包</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
