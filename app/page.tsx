@@ -87,7 +87,7 @@ export default function Page() {
         const l = k < 10 ? "0" + k : k;
         const src = `${process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/poster/${l}.jpg`;
         return (
-          <Link href="/images" key={l}>
+          <Link href="/images/default" key={l}>
             <FramerMotionDiv
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -100,6 +100,7 @@ export default function Page() {
                 height={500}
                 priority={k < 5}
                 className="w-full h-auto object-contain"
+                unoptimized
               />
             </FramerMotionDiv>
           </Link>
