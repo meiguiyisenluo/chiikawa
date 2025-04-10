@@ -24,7 +24,7 @@ const headerNavLinks: Array<HrefNavItem | ChildrenNavItem> = [
       },
       {
         name: "三小只",
-        href: "/images",
+        href: "/images/default",
       },
       {
         name: "网友批图",

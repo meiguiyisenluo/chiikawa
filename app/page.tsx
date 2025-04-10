@@ -12,7 +12,7 @@ export default function Page() {
             {
               alt: "三小只",
               src: "/static/images/yobri/default.jpg",
-              href: "/images",
+              href: "/images/default",
             },
             {
               alt: "网友批图",
