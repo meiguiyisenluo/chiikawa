@@ -32,6 +32,23 @@ const headerNavLinks: Array<HrefNavItem | ChildrenNavItem> = [
       },
     ],
   },
+  // {
+  //   name: "视频",
+  //   children: [
+  //     {
+  //       name: "ちいかわ 吉伊 chiikawa",
+  //       href: "/videos/71",
+  //     },
+  //     {
+  //       name: "ハチワレ 小八 hachiware",
+  //       href: "/videos/8",
+  //     },
+  //     {
+  //       name: "うさぎ 乌萨奇 usagi",
+  //       href: "/videos/537",
+  //     },
+  //   ],
+  // },
   {
     name: "角色介绍",
     children: [
