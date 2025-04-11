@@ -4,10 +4,10 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>;
 }) {
   const { slug = [] } = await props.params;
-  let res = "表情包";
-  if (slug[0] === "8") res = "小八";
-  else if (slug[0] === "71") res = "吉伊";
-  else if (slug[0] === "537") res = "乌萨奇";
+  let res = "好多chiikawa表情包呀";
+  if (slug[0] === "8") res = "好多小八表情包呀";
+  else if (slug[0] === "71") res = "好多吉伊表情包呀";
+  else if (slug[0] === "537") res = "好多乌萨奇表情包呀";
   return {
     title: res,
   };
