@@ -9,21 +9,9 @@ export default async function Page() {
     `${process.env.BASE_URL}/api/edge-config-store/sliderData`
   )
     .then(async (_) => {
-      console.log("start");
-      console.log(await _.text());
-      console.log("end");
-      return _.json();
+      return JSON.parse(await _.text());
     })
-    .catch(() => [
-      {
-        href: "/videos/default/01",
-        src: "/sliders/02.png",
-      },
-      {
-        href: "/videos/8/01",
-        src: "/sliders/01.png",
-      },
-    ]);
+    .catch(() => []);
 
   return (
     <>
