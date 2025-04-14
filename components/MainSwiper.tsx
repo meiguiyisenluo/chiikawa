@@ -8,26 +8,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./MainSwiper.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 export default function MainSwiper() {
   return (
     <Swiper
-      className="w-full"
+      className="my-custom-swiper w-full"
       loop
       spaceBetween={5}
       slidesPerView={1}
       autoplay={{
-        delay: 2000,
+        delay: 5000,
         disableOnInteraction: true,
       }}
       pagination={{
         clickable: true,
       }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation, Autoplay]}
     >
       {[
         {

@@ -1,0 +1,29 @@
+/* 仅针对 my-custom-swiper 实例修改 Pagination 样式 */
+.my-custom-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5); /* 半透明白色 */
+  transition: background 0.3s ease;
+}
+
+.my-custom-swiper .swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 1); /* hover 时完全不透明 */
+}
+
+/* 修改 Navigation 按钮样式 */
+.my-custom-swiper .swiper-button-next,
+.my-custom-swiper .swiper-button-prev {
+  color: rgba(255, 255, 255, 0.5); /* 半透明白色 */
+  transition: color 0.3s ease;
+}
+
+.my-custom-swiper .swiper-button-next:hover,
+.my-custom-swiper .swiper-button-prev:hover {
+  color: rgba(255, 255, 255, 1); /* hover 时完全不透明 */
+}
+
+/* 在移动端隐藏 Navigation */
+@media screen and (max-width: 768px) {
+  .my-custom-swiper .swiper-button-next,
+  .my-custom-swiper .swiper-button-prev {
+    display: none;
+  }
+}
