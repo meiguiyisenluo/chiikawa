@@ -8,9 +8,9 @@ export default async function Page() {
   const sliderData = await fetch(
     `${process.env.BASE_URL}/api/edge-config-store/sliderData`
   )
-    .then((_) => {
+    .then(async (_) => {
       console.log("start");
-      console.log(_.text());
+      console.log(await _.text());
       console.log("end");
       return _.json();
     })
