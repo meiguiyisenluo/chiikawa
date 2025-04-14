@@ -31,12 +31,12 @@ export default function MainSwiper() {
     >
       {[
         {
-          href: "/videos/8/01",
-          src: "/sliders/01.png",
-        },
-        {
           href: "/videos/default/01",
           src: "/sliders/02.png",
+        },
+        {
+          href: "/videos/8/01",
+          src: "/sliders/01.png",
         },
       ].map((item, idx) => {
         const src = `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}${item.src}`;
