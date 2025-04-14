@@ -50,6 +50,7 @@ export default function MainSwiper() {
                 height={1080}
                 priority={true}
                 className="object-scale-down"
+                unoptimized
               />
             </Link>
           </SwiperSlide>
