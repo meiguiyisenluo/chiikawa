@@ -15,7 +15,11 @@ import "./MainSwiper.css";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-export default function MainSwiper() {
+export default function MainSwiper({
+  sliderData,
+}: {
+  sliderData: Array<{ src: string; href: string }>;
+}) {
   return (
     <Swiper
       className="my-custom-swiper w-full"
@@ -32,16 +36,7 @@ export default function MainSwiper() {
       navigation={true}
       modules={[Pagination, Navigation, Autoplay]}
     >
-      {[
-        {
-          href: "/videos/default/01",
-          src: "/sliders/02.png",
-        },
-        {
-          href: "/videos/8/01",
-          src: "/sliders/01.png",
-        },
-      ].map((item, idx) => {
+      {sliderData.map((item, idx) => {
         const src = `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}${item.src}`;
         return (
           <SwiperSlide key={idx}>
