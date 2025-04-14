@@ -1,3 +1,6 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+
 import Script from "next/script";
 import Head from "next/head";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -139,6 +142,9 @@ export default function RootLayout({
           <ScrollToTop />
           <FramerMotionProgress></FramerMotionProgress>
         </ThemeProviders>
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
