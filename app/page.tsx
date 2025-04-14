@@ -7,16 +7,10 @@ import MainSwiper from "@/components/MainSwiper";
 export default async function Page() {
   const sliderData = await fetch(
     `${process.env.BASE_URL}/api/edge-config-store/sliderData`
-  ).then(() => [
-    {
-      href: "/videos/default/01",
-      src: "/sliders/02.png",
-    },
-    {
-      href: "/videos/8/01",
-      src: "/sliders/01.png",
-    },
-  ]);
+  ).then((_) => {
+    console.log(_.text());
+    return _.json();
+  });
 
   return (
     <>
