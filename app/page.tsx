@@ -6,7 +6,8 @@ import MainSwiper from "@/components/MainSwiper";
 
 export default async function Page() {
   const sliderData = await fetch(
-    `${process.env.BASE_URL}/api/edge-config-store/sliderData`
+    `${process.env.BASE_URL}/api/edge-config-store/sliderData`,
+    { cache: "no-store" }
   )
     .then(async (_) => {
       return JSON.parse(await _.text());

@@ -2,7 +2,8 @@ export async function generateMetadata(props: {
   params: Promise<{ character: string; slug?: string }>;
 }) {
   const videoData = await fetch(
-    `${process.env.BASE_URL}/api/edge-config-store/videoData`
+    `${process.env.BASE_URL}/api/edge-config-store/videoData`,
+    { cache: "no-store" }
   )
     .then((_) => _.json())
     .catch(() => ({}));
