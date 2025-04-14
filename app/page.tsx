@@ -9,7 +9,6 @@ export default function Page() {
     <>
       <MainSwiper></MainSwiper>
 
-
       <div className="py-4 bg-gray-100 dark:bg-transparent">
         <div className="w-full max-w-7xl p-4 lg:p-8 mx-auto flex justify-between">
           {[
@@ -42,6 +41,7 @@ export default function Page() {
                   width={300}
                   height={300}
                   priority={true}
+                  unoptimized
                 />
                 <p className="font-bold text-center mt-2">{item.alt}</p>
               </FramerMotionDiv>
@@ -49,7 +49,7 @@ export default function Page() {
           ))}
         </div>
       </div>
-      
+
       <div className="py-4 bg-gray-100 dark:bg-transparent">
         <div className="flex justify-around w-full max-w-7xl p-4 lg:p-8 mx-auto ">
           {[
@@ -78,6 +78,7 @@ export default function Page() {
                   height={300}
                   priority={true}
                   className="border-2 border-yellow-200 dark:border-blue-500"
+                  unoptimized
                 />
                 <p className="font-bold text-center mt-2">{item.alt}</p>
               </FramerMotionDiv>
@@ -105,6 +106,7 @@ export default function Page() {
                 // priority={k < 5}
                 className="w-full h-auto object-contain"
                 unoptimized
+                loading="lazy"
               />
             </FramerMotionDiv>
           </Link>

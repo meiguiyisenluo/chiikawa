@@ -14,6 +14,7 @@ const CharacterCard = ({ character }: { character: Character }) => {
           width={300}
           height={300}
           className="rounded-full"
+          unoptimized
         />
       </div>
       {/* 人物信息 */}
