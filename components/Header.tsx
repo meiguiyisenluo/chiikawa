@@ -18,7 +18,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 
 export default function Header() {
   return (
-    <header className="flex items-center w-full h-[7%] sm:h-[8%] px-4 sticky top-0 bg-inherit shadow-md">
+    <header className="flex items-center w-full h-[7%] sm:h-[8%] px-4 sticky z-20 top-0 bg-inherit shadow-md">
       <Image
         src="/static/images/logo.gif"
         alt="logo.gif"

@@ -14,23 +14,9 @@ export default async function Page(props: {
         loop
         autoPlay
         playsInline
-        src={`${process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/videos/${character}/${slug}.mp4`}
+        src={`${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/videos/${character}/${slug}.mp4`}
       />
     </div>
   );
 }
 
-// export default async function Page() {
-
-//   return (
-//     <video
-//       className="max-w-full mx-auto"
-//       controls
-//       loop
-//       autoPlay
-//       muted
-//       playsInline
-//       src={`${process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/videos/${character}/${slug}.mp4`}
-//     ></video>
-//   );
-// }

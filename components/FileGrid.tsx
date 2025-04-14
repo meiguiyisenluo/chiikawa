@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import FramerMotionDiv from "@/components/FramerMotionDiv";
 
-const url = process.env.CLOUDFLARE_R2_PUBLIC_ACCESS_URL;
+const url = process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL;
 
 export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
   const res = await fetch(
