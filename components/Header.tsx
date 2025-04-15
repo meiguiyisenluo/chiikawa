@@ -10,13 +10,19 @@ import {
 import MobileNav from "@/components/MobileNav";
 import headerNavLinks from "@/data/headerNavLinks";
 
-import ThemeSwitch from "./ThemeSwitch";
+import Stars from "@/components/Stars";
+import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
 import Image from "next/image";
 
 import { siteMetadata } from "@/data/siteMetadata";
 
-export default function Header() {
+export default async function Header() {
+  const { result: stars } = await fetch(
+    `${process.env.BASE_URL}/api/upstash-kv/stars`
+  )
+    .then((_) => _.json())
+    .catch(() => ({ result: 0 }));
   return (
     <header className="flex items-center w-full h-[7%] sm:h-[8%] px-4 sticky z-40 top-0 bg-inherit shadow-md">
       <Image
@@ -78,6 +84,7 @@ export default function Header() {
         </nav>
       </div>
 
+      <Stars stars={stars} />
       <ThemeSwitch />
       <MobileNav />
     </header>

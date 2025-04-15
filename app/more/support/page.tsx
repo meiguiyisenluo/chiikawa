@@ -86,6 +86,13 @@ export default function Support() {
           <br />
         </li>
         <li>
+          <p className="font-bold">2. GitHub 点个 Star</p>
+          <p className="indent-[2em]">
+            在网站的顶部，给我点个小星星 🌟！ 这对我也非常有帮助
+          </p>
+          <br />
+        </li>
+        <li>
           <p className="font-bold">3. 直接支持</p>
           <div className="indent-[2em]">
             如果你愿意，可以通过以下方式直接支持我：

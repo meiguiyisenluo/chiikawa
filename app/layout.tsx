@@ -138,11 +138,11 @@ export default function RootLayout({
       </Head>
 
       <body
-        className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-black text-[#374151] dark:text-white`}
+        className={`font-sans antialiased w-[100vw] h-[100vh] overflow-x-hidden overflow-y-auto bg-[#F9F9F9] dark:bg-[#101524] text-[#374151] dark:text-[#f2ddcc]`}
       >
         <ThemeProviders>
           <Header></Header>
-          <main>{children}</main>
+          <main className="min-h-[600px]">{children}</main>
           <Footer></Footer>
           <ScrollToTop />
           <FramerMotionProgress></FramerMotionProgress>
