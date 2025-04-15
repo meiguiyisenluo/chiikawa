@@ -18,7 +18,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 
 export default function Header() {
   return (
-    <header className="flex items-center w-full h-[7%] sm:h-[8%] px-4 sticky z-20 top-0 bg-inherit shadow-md">
+    <header className="flex items-center w-full h-[7%] sm:h-[8%] px-4 sticky z-40 top-0 bg-inherit shadow-md">
       <Image
         src="/static/images/logo.gif"
         alt="logo.gif"
@@ -55,7 +55,7 @@ export default function Header() {
                   <PopoverPanel
                     transition
                     anchor="bottom"
-                    className="divide-y divide-white/5 rounded-xl bg-black/50 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0"
+                    className="z-50 divide-y divide-white/5 rounded-xl bg-black/50 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0"
                   >
                     <div className="p-3">
                       {item.children?.map((item) => (
