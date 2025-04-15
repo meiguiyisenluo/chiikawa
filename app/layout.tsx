@@ -105,6 +105,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <GoogleAnalytics gaId="G-62682KVZ4V" />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5148846884555694"
+        crossOrigin="anonymous"
+      ></script>
       <Script id="jsonld" async type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
