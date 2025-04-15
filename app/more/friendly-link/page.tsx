@@ -24,14 +24,15 @@ export default async function FriendlyLink() {
 
       {friendlyLinkData.map(
         (item: { name: string; href: string }, idx: number) => (
-          <Link
-            as={"div"}
-            key={idx}
-            href={item.href}
-            className="hover:underline text-blue-500 decoration-blue-500 font-bold"
-          >
-            <p>{item.name}</p>
-          </Link>
+          <div key={idx}>
+            <Link
+            target="_blank"
+              href={item.href}
+              className="hover:underline text-blue-500 decoration-blue-500 font-bold"
+            >
+              <p>{item.name}</p>
+            </Link>
+          </div>
         )
       )}
 
