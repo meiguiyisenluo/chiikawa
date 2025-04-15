@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Support() {
   return (
-    <div className="w-full max-w-7xl h-[93%] sm:h-[92%] p-4 lg:p-8 mx-auto outline-none">
+    <>
       <h2 className="text-center text-lg font-bold">
         支持 Chiikawa 表情包站，让我们一起更可爱、更有趣！
       </h2>
@@ -73,7 +73,11 @@ export default function Support() {
           <p className="font-bold">2. GitHub 点个 Star</p>
           <p className="indent-[2em]">
             访问网站的{" "}
-            <Link href={"https://github.com/meiguiyisenluo/chiikawa"} target="_blank" className="text-blue-500">
+            <Link
+              href={"https://github.com/meiguiyisenluo/chiikawa"}
+              target="_blank"
+              className="text-blue-500"
+            >
               源码页面
             </Link>
             ，给我点个小星星 🌟！
@@ -83,7 +87,7 @@ export default function Support() {
         </li>
         <li>
           <p className="font-bold">3. 直接支持</p>
-          <p className="indent-[2em]">
+          <div className="indent-[2em]">
             如果你愿意，可以通过以下方式直接支持我：
             <div className="flex">
               <Image
@@ -105,22 +109,9 @@ export default function Support() {
                 unoptimized
               />
             </div>
-          </p>
+          </div>
         </li>
       </ul>
-
-      <br />
-      <br />
-      <hr />
-      <br />
-      <br />
-
-      <p className="font-bold">感谢你的支持！</p>
-      <br />
-      <p className="indent-[2em]">
-        因为有你们的陪伴，这个网站才更有意义！
-        希望你们用得开心，也期待和你们一起创造更有爱的 Chiikawa 社区！
-      </p>
-    </div>
+    </>
   );
 }

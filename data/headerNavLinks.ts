@@ -70,6 +70,10 @@ const headerNavLinks: Array<HrefNavItem | ChildrenNavItem> = [
     name: "更多",
     children: [
       {
+        name: "友链",
+        href: "/more/friendly-link",
+      },
+      {
         name: "使用方式",
         href: "/more/usetype",
       },
