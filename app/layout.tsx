@@ -103,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="zh" suppressHydrationWarning className="scroll-smooth">
       <GoogleAnalytics gaId="G-62682KVZ4V" />
       <script
         async
