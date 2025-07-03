@@ -1,4 +1,5 @@
 import { getAll } from "@vercel/edge-config";
+import { cache } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type EdgeConfig = Record<string, any>;
@@ -6,7 +7,7 @@ type EdgeConfig = Record<string, any>;
 let cachedConfig: EdgeConfig = {};
 let isConfigLoading = false;
 
-export async function getEdgeConfigOnce(): Promise<EdgeConfig> {
+export const getEdgeConfigOnce: () => Promise<EdgeConfig> = cache(async () => {
   if (isConfigLoading) {
     console.log("🔄 Using cached Edge Config...");
     return cachedConfig;
@@ -22,4 +23,4 @@ export async function getEdgeConfigOnce(): Promise<EdgeConfig> {
     cachedConfig = {}; // fallback 防止后续报错
     return cachedConfig;
   }
-}
+});
