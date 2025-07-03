@@ -1,9 +1,8 @@
-import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
+import edgeConfig from "@/edgeConfig/data";
 
 export async function generateMetadata(props: {
   params: Promise<{ character: string; slug?: string }>;
 }) {
-  const edgeConfig = await getEdgeConfigOnce();
   const params = await props.params;
   const { slug = "" } = params;
   const { character } = params;
@@ -14,6 +13,7 @@ export async function generateMetadata(props: {
   else if (character === "537") res = "乌萨奇有话对你说";
 
   try {
+    // @ts-expect-error 无限对象先不管
     res = edgeConfig.videoData[character][slug].title || res;
   } catch (error) {
     console.log(error);

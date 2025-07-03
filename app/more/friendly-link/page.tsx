@@ -1,9 +1,7 @@
 import Link from "next/link";
 
-import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
+import edgeConfig from "@/edgeConfig/data";
 export default async function FriendlyLink() {
-  const edgeConfig = await getEdgeConfigOnce();
-
   return (
     <>
       <h2 className="text-center text-lg font-bold">

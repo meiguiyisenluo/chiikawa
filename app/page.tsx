@@ -4,11 +4,9 @@ import Link from "next/link";
 import FramerMotionDiv from "@/components/FramerMotionDiv";
 import MainSwiper from "@/components/MainSwiper";
 
-import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
+import edgeConfig from "@/edgeConfig/data";
 
 export default async function Page() {
-  const edgeConfig = await getEdgeConfigOnce();
-
   return (
     <>
       <MainSwiper sliderData={edgeConfig.sliderData}></MainSwiper>
