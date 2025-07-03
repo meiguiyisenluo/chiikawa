@@ -1,13 +1,9 @@
+import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
+
 export async function generateMetadata(props: {
   params: Promise<{ character: string; slug?: string }>;
 }) {
-  const videoData = await fetch(
-    `${process.env.BASE_URL}/api/edge-config-store/videoData`,
-    { cache: "no-store" }
-  )
-    .then((_) => _.json())
-    .catch(() => ({}));
-
+  const edgeConfig = await getEdgeConfigOnce();
   const params = await props.params;
   const { slug = "" } = params;
   const { character } = params;
@@ -18,7 +14,7 @@ export async function generateMetadata(props: {
   else if (character === "537") res = "乌萨奇有话对你说";
 
   try {
-    res = videoData[character][slug].title || res;
+    res = edgeConfig.videoData[character][slug].title || res;
   } catch (error) {
     console.log(error);
   }

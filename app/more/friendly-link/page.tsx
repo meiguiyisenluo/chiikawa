@@ -1,14 +1,8 @@
 import Link from "next/link";
 
+import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
 export default async function FriendlyLink() {
-  const friendlyLinkData = await fetch(
-    `${process.env.BASE_URL}/api/edge-config-store/friendlyLinkData`,
-    { cache: "no-store" }
-  )
-    .then(async (_) => {
-      return JSON.parse(await _.text());
-    })
-    .catch(() => []);
+  const edgeConfig = await getEdgeConfigOnce();
 
   return (
     <>
@@ -22,11 +16,11 @@ export default async function FriendlyLink() {
       <br />
       <br />
 
-      {friendlyLinkData.map(
+      {edgeConfig.friendlyLinkData.map(
         (item: { name: string; href: string }, idx: number) => (
           <div key={idx}>
             <Link
-            target="_blank"
+              target="_blank"
               href={item.href}
               className="hover:underline text-blue-500 decoration-blue-500 font-bold"
             >

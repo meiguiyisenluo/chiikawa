@@ -4,19 +4,14 @@ import Link from "next/link";
 import FramerMotionDiv from "@/components/FramerMotionDiv";
 import MainSwiper from "@/components/MainSwiper";
 
+import { getEdgeConfigOnce } from "@/edgeConfig/getEdgeConfigOnce";
+
 export default async function Page() {
-  const sliderData = await fetch(
-    `${process.env.BASE_URL}/api/edge-config-store/sliderData`,
-    { cache: "no-store" }
-  )
-    .then(async (_) => {
-      return JSON.parse(await _.text());
-    })
-    .catch(() => []);
+  const edgeConfig = await getEdgeConfigOnce();
 
   return (
     <>
-      <MainSwiper sliderData={sliderData}></MainSwiper>
+      <MainSwiper sliderData={edgeConfig.sliderData}></MainSwiper>
 
       <div className="py-4 bg-gray-100 dark:bg-transparent">
         <div className="w-full max-w-7xl p-4 lg:p-8 mx-auto flex justify-between">
