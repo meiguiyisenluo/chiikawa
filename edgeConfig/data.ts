@@ -16,6 +16,10 @@ const data = {
   },
   sliderData: [
     {
+      href: "/videos/default/02",
+      src: "/sliders/05.png",
+    },
+    {
       href: "/videos/default/01",
       src: "/sliders/02.jpg",
     },

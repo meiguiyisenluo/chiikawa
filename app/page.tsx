@@ -16,17 +16,17 @@ export default async function Page() {
           {[
             {
               alt: "小八 hachiware",
-              src: "/static/images/yobri/8.webp",
+              src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/yobri/icon_hachiware-1-300x300.webp`,
               href: "/images/8",
             },
             {
               alt: "吉伊 chiikawa",
-              src: "/static/images/yobri/71.webp",
+              src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/yobri/icon_chiikawa-1-300x300.webp`,
               href: "/images/71",
             },
             {
               alt: "乌萨奇 usagi",
-              src: "/static/images/yobri/537.webp",
+              src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/yobri/icon_usagi-1-300x300.webp`,
               href: "/images/537",
             },
           ].map((item) => (
@@ -42,8 +42,8 @@ export default async function Page() {
                   src={item.src}
                   width={300}
                   height={300}
-                  priority={true}
                   unoptimized
+                  loading="lazy"
                 />
                 <p className="font-bold text-center mt-2">{item.alt}</p>
               </FramerMotionDiv>
@@ -57,12 +57,12 @@ export default async function Page() {
           {[
             {
               alt: "三小只",
-              src: "/static/images/yobri/default.jpg",
+              src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/poster/18.jpg`,
               href: "/images/default",
             },
             {
               alt: "网友批图",
-              src: "/static/images/yobri/cus.jpg",
+              src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_ACCESS_URL}/poster/15.jpg`,
               href: "/images/cus",
             },
           ].map((item) => (
@@ -78,9 +78,9 @@ export default async function Page() {
                   src={item.src}
                   width={300}
                   height={300}
-                  priority={true}
                   className="border-2 border-yellow-200 dark:border-blue-500"
                   unoptimized
+                  loading="lazy"
                 />
                 <p className="font-bold text-center mt-2">{item.alt}</p>
               </FramerMotionDiv>

@@ -86,7 +86,7 @@ export default function Support() {
           <br />
         </li>
         <li>
-          <p className="font-bold">2. GitHub 点个 Star</p>
+          <p className="font-bold">3. 网站顶部点一下星星</p>
           <p className="indent-[2em]">
             在网站的顶部，给我点个小星星 🌟！ 这对我也非常有帮助
           </p>

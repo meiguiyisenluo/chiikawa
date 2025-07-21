@@ -26,7 +26,7 @@ export default async function FileGrid({ slug = [] }: { slug?: string[] }) {
     <div className="w-full h-[93%] sm:h-[92%] flex flex-wrap content-start justify-start p-4 lg:p-8 outline-none">
       {fileList.map((file: { type: string; Key: string }) => (
         <div
-          className="overflow-hidden rounded-md cursor-pointer w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/7 2xl:w-1/8"
+          className="overflow-hidden rounded-md cursor-pointer w-1/3 sm:w-1/4 md:w-1/4 lg:w-1/6 xl:w-1/6 2xl:w-1/6"
           key={file.Key}
         >
           <Link href={url + "/" + file.Key} target="_blank">
