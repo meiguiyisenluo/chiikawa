@@ -16,6 +16,10 @@ const data = {
   },
   sliderData: [
     {
+      href: "https://v.douyin.com/iAzfqkiuI90/",
+      src: "/sliders/04.png",
+    },
+    {
       href: "/videos/default/02",
       src: "/sliders/05.png",
     },
