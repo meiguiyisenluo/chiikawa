@@ -57,7 +57,7 @@ export default function Support() {
       <p className="font-bold">支持我继续开发这个网站</p>
       <br />
       <p>
-        目前，我正在失业状态，自费维护这个网站。如果你觉得它好用或者帮助到了你，以下几种方式能够让我坚持下去，也可以继续为大家提供更好的内容与服务：
+        目前，我正在自费维护这个网站。如果你觉得它好用或者帮助到了你，以下几种方式能够让我坚持下去，也可以继续为大家提供更好的内容与服务：
       </p>
       <br />
 
@@ -92,7 +92,7 @@ export default function Support() {
           </p>
           <br />
         </li>
-        <li>
+        {/* <li>
           <p className="font-bold">3. 直接支持</p>
           <div className="indent-[2em]">
             如果你愿意，可以通过以下方式直接支持我：
@@ -117,7 +117,7 @@ export default function Support() {
               />
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </>
   );

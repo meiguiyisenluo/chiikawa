@@ -15,7 +15,8 @@ export interface Character {
 export const roleList: Record<string, Character> = {
   "8": {
     name: "ハチワレ hachiware 小八",
-    image: "/static/images/yobri/8.webp", // 替换成头像路径
+    image:
+      "https://chiikawa.r2.1591420.xyz/yobri/icon_hachiware-1-300x300.webp", // 替换成头像路径
     descriptions: [
       "性格外向，乐观开朗，是个乐天派，可也会因此让自己陷入危机。善解人意，台词较多，会替朋友们说出想表达的意思。会为朋友考虑，珍视友情。",
       "在紧要关头会大喊“总会有办法的！”，多次拼尽全力冲出重围。",
@@ -41,7 +42,7 @@ export const roleList: Record<string, Character> = {
   },
   "71": {
     name: "ちいかわ chiikawa 吉伊",
-    image: "/static/images/yobri/71.webp", // 替换成头像路径
+    image: "https://chiikawa.r2.1591420.xyz/yobri/icon_chiikawa-1-300x300.webp", // 替换成头像路径
     descriptions: [
       "《吉伊卡哇》系列中的主要角色之一。身体小小的，毛发是白色，尾巴是小小的圆球。天气变冷时毛发会变长，不修剪的话会长痱子。",
       "虽然有点爱哭鬼，但内心很善良。性格内向和害羞，行事胆小慎重，但会在一些关键时刻机敏灵活化险为夷。",
@@ -68,7 +69,7 @@ export const roleList: Record<string, Character> = {
   },
   "537": {
     name: "うさぎ usagi 乌萨奇",
-    image: "/static/images/yobri/537.webp", // 替换成头像路径
+    image: "https://chiikawa.r2.1591420.xyz/yobri/icon_usagi-1-300x300.webp", // 替换成头像路径
     descriptions: [
       "《吉伊卡哇》系列中的主要角色之一。是吉伊和小八的好朋友，以兔子为原型。身体小小的，身体的毛发是黄色，尾巴为白色的大绒球。",
       "靠除草、采集和讨伐为生，已考取三级除草证。",
