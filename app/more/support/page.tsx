@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Support() {
@@ -92,7 +92,7 @@ export default function Support() {
           </p>
           <br />
         </li>
-        {/* <li>
+        <li>
           <p className="font-bold">3. 直接支持</p>
           <div className="indent-[2em]">
             如果你愿意，可以通过以下方式直接支持我：
@@ -117,7 +117,7 @@ export default function Support() {
               />
             </div>
           </div>
-        </li> */}
+        </li>
       </ul>
     </>
   );
